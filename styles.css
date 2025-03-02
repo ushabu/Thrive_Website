@@ -895,46 +895,32 @@ section {
 
 /* App Showcase Section */
 .app-showcase {
-    background-color: var(--dark-color);
-    position: relative;
-    overflow: hidden;
-    padding: 120px 0;
-}
-
-.app-showcase::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 20%, rgba(147, 112, 219, 0.2) 0%, transparent 60%);
-    z-index: 0;
+    background-color: #4e2a84; /* Purple background that matches the screenshot */
+    color: white;
+    padding: 80px 0;
 }
 
 .app-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
-    position: relative;
-    z-index: 1;
 }
 
 .app-content {
-    padding-right: 2rem;
+    padding-right: 30px;
 }
 
 .app-content h3 {
     font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--secondary-color);
+    margin-bottom: 20px;
+    color: white;
 }
 
 .app-content p {
+    margin-bottom: 30px;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
 }
 
 .app-features {
@@ -945,218 +931,133 @@ section {
 
 .app-feature {
     display: flex;
-    align-items: flex-start;
-    background: rgba(74, 43, 126, 0.4);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
-}
-
-.app-feature:hover {
-    transform: translateX(10px);
-    border-left: 3px solid var(--secondary-color);
-    background: rgba(74, 43, 126, 0.6);
+    flex-direction: column;
+    gap: 10px;
 }
 
 .app-feature i {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-right: 15px;
-    margin-top: 5px;
+    font-size: 1.8rem;
+    color: #a3c4f3; /* Light blue accent color */
 }
 
 .app-feature h4 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin: 0;
     color: white;
 }
 
 .app-feature p {
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 1rem;
 }
 
-/* App Store Buttons */
-.app-store-buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.app-store-button {
-    display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.app-store-button:hover {
-    transform: translateY(-5px);
-    background: var(--primary-color);
-    border-color: white;
-}
-
-.app-store-button i {
-    font-size: 2rem;
-    margin-right: 10px;
-}
-
-.app-store-button span {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    line-height: 1.2;
-}
-
-.app-store-button small {
-    font-size: 0.7rem;
-    opacity: 0.8;
-}
-
-/* Fixing the phone overlapping issue */
+/* App Screenshots Styling */
 .app-screens {
-    position: relative;
     display: flex;
     justify-content: center;
-}
-
-.phone {
-    position: absolute;
-}
-
-.phone-1 {
-    left: -50px;
-    z-index: 3;
-}
-
-.phone-2 {
-    left: 0;
-    z-index: 2;
-}
-
-.phone-3 {
-    left: 50px;
-    z-index: 1;
-}
-
-.phone img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Reset any transformations */
-.phone {
-    transform: none !important;
-}
-
-
-/* App screenshots styling */
-.phone-screenshot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px; /* Match the inner border radius of the phone */
+    align-items: center;
     position: relative;
-    z-index: 2;
+    height: 600px;
 }
 
-/* Update phone styling */
 .phone {
     position: absolute;
-    width: 250px;
-    height: 500px;
-    background: #211134;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 280px;
+    border-radius: 36px;
+    background-color: #000;
     padding: 10px;
-    transition: all 0.5s ease;
-  /* App screenshots styling */
-.phone-screenshot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px; /* Match the inner border radius of the phone */
-    position: relative;
-    z-index: 2;
-}
-
-/* Update phone styling */
-.phone {
-    position: absolute;
-    width: 250px;
-    height: 500px;
-    background: #211134;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    transition: all 0.5s ease;
-    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 .phone-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    background-color: #fff;
+    height: 560px;
+}
+
+.phone-screenshot {
     width: 100%;
     height: 100%;
-    border-radius: 22px;
-    overflow: hidden;
-    background: transparent; /* Remove background as we'll use images */
+    object-fit: cover;
+    border-radius: 28px;
 }
 
-/* Remove the pseudo-elements since we're using real images now */
-.phone-inner::before,
-.phone-inner::after {
-    display: none;
-}
-
-.phone-1 .phone-inner::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%234A2B7E'/%3E%3Ctext x='50%25' y='20%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-size='18'%3EOnboarding%3C/text%3E%3Crect x='15%25' y='30%25' width='70%25' height='15%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3Crect x='15%25' y='50%25' width='70%25' height='15%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3Crect x='15%25' y='70%25' width='70%25' height='15%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3C/svg%3E");
-}
-
-.phone-2 .phone-inner::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%234A2B7E'/%3E%3Ctext x='50%25' y='15%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-size='18'%3EAccessibility Features%3C/text%3E%3Ccircle cx='50%25' cy='40%25' r='60' fill='rgba(177,156,217,0.3)'/%3E%3Crect x='20%25' y='60%25' width='60%25' height='10%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3Crect x='20%25' y='75%25' width='60%25' height='10%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3C/svg%3E");
-}
-
-.phone-3 .phone-inner::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='250' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%234A2B7E'/%3E%3Ctext x='50%25' y='15%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-size='18'%3ECommunity%3C/text%3E%3Ccircle cx='30%25' cy='30%25' r='25' fill='rgba(255,255,255,0.2)'/%3E%3Ccircle cx='70%25' cy='30%25' r='25' fill='rgba(255,255,255,0.2)'/%3E%3Ccircle cx='30%25' cy='50%25' r='25' fill='rgba(255,255,255,0.2)'/%3E%3Ccircle cx='70%25' cy='50%25' r='25' fill='rgba(255,255,255,0.2)'/%3E%3Crect x='15%25' y='75%25' width='70%25' height='15%25' rx='10' fill='rgba(255,255,255,0.2)'/%3E%3C/svg%3E");
-}
-
+/* Phone positioning */
 .phone-1 {
-    transform: rotate(-5deg) translateY(20px);
-    left: 0;
-    z-index: 1;
-}
-
-.phone-2 {
-    transform: scale(1.1);
-    left: 50%;
-    margin-left: -125px;
+    transform: translateX(-50%) rotate(-5deg);
     z-index: 3;
 }
 
-.phone-3 {
-    transform: rotate(5deg) translateY(20px);
-    right: 0;
+.phone-2 {
     z-index: 1;
 }
 
-.phone:hover {
-    transform: translateY(-20px) scale(1.05);
-    z-index: 4;
+.phone-3 {
+    transform: translateX(50%) rotate(5deg);
+    z-index: 2;
 }
 
-.phone-1:hover {
-    transform: rotate(0deg) translateY(-20px) scale(1.05);
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .app-content {
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+    
+    .app-screens {
+        height: 500px;
+    }
+    
+    .phone {
+        width: 220px;
+    }
+    
+    .phone-inner {
+        height: 440px;
+    }
 }
 
-.phone-3:hover {
-    transform: rotate(0deg) translateY(-20px) scale(1.05);
+@media (max-width: 768px) {
+    .app-screens {
+        height: 400px;
+    }
+    
+    .phone {
+        width: 180px;
+    }
+    
+    .phone-inner {
+        height: 360px;
+    }
+    
+    .phone-1 {
+        transform: translateX(-40%) rotate(-5deg);
+    }
+    
+    .phone-3 {
+        transform: translateX(40%) rotate(5deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .app-screens {
+        height: 340px;
+    }
+    
+    .phone {
+        width: 140px;
+    }
+    
+    .phone-inner {
+        height: 280px;
+    }
 }
 
 /* Community Section */
