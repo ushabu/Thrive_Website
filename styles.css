@@ -1022,30 +1022,28 @@ section {
 
 /* Fixing the phone overlapping issue */
 .app-screens {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: -20px; /* Reduce the gap between images */
 }
 
 .phone {
-    position: relative;
-    width: 200px; /* Adjust width if needed */
+    position: absolute;
 }
 
 .phone-1 {
+    left: -50px;
     z-index: 3;
-    transform: translateX(-30px); /* Shift slightly */
 }
 
 .phone-2 {
+    left: 0;
     z-index: 2;
-    transform: translateX(0);
 }
 
 .phone-3 {
+    left: 50px;
     z-index: 1;
-    transform: translateX(30px);
 }
 
 .phone img {
