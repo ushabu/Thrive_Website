@@ -457,6 +457,9 @@ section {
 
 .hero-content {
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
 }
 
 .hero-content h1 {
@@ -476,7 +479,27 @@ section {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
 }
+.hero-content .cta-button, 
+.hero-content a.cta-button {
+    align-self: flex-start; /* Align button to the left */
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 14px 30px;
+    background: rgba(147, 112, 219, 0.7);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+.hero-content .cta-button:hover,
+.hero-content a.cta-button:hover {
+    background: rgba(147, 112, 219, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 /* Hero scroll indicator */
 .hero-scroll {
     position: absolute;
