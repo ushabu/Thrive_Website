@@ -1025,6 +1025,17 @@ section {
     height: 550px;
 }
 
+/* App screenshots styling */
+.phone-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Match the inner border radius of the phone */
+    position: relative;
+    z-index: 2;
+}
+
+/* Update phone styling */
 .phone {
     position: absolute;
     width: 250px;
@@ -1034,37 +1045,20 @@ section {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     padding: 10px;
     transition: all 0.5s ease;
+    overflow: hidden;
 }
-
 .phone-inner {
     width: 100%;
     height: 100%;
-    background: #4A2B7E;
-    border-radius: 25px;
+    border-radius: 22px;
     overflow: hidden;
-    position: relative;
+    background: transparent; /* Remove background as we'll use images */
 }
 
-.phone-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(74, 43, 126, 0.8) 0%, rgba(45, 27, 77, 0.8) 100%);
-}
-
+/* Remove the pseudo-elements since we're using real images now */
+.phone-inner::before,
 .phone-inner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center top;
-    opacity: 0.9;
+    display: none;
 }
 
 .phone-1 .phone-inner::after {
