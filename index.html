@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIVE</title>
+    <title>Wellness Reimagined for Every Body</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/thrive-logo.png">
+</head>
+<body>
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls" aria-label="Accessibility Options">
+        <button id="contrast-toggle" aria-label="Toggle High Contrast">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button id="font-increase" aria-label="Increase Font Size">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button id="font-decrease" aria-label="Decrease Font Size">
+            <i class="fas fa-minus"></i>
+        </button>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- Update the logo section in index.html -->
+         <div class="logo">
+            <a href="#" aria-label="Home">
+                 <img src="image/thrive-logo.png" alt="" class="logo-image">
+                 <span class="brand-name">THRIVE</span>
+            </a>
+        </div>
+                <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="#mission">Mission</a>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#app-showcase">App</a>
+                    <a href="#community">Community</a>
+                    <a href="#contact" class="cta-button">Join Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Wellness Reimagined for Every Body</h1>
+                <p>THRIVE is an inclusive wellness platform that combines accessibility with gender-inclusive health resources, creating a space where everyone can access personalized wellness tools.</p>
+                <a href="#features" class="cta-button pulse-button">Discover THRIVE</a>
+            </div>
+            <div class="hero-image" aria-hidden="true">
+                <!-- Placeholder for hero image -->
+                <div class="placeholder-image">
+                    <div class="floating-element floating-element-1"></div>
+                    <div class="floating-element floating-element-2"></div>
+                    <div class="floating-element floating-element-3"></div>
+                    <div class="floating-element floating-element-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#mission">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section id="mission" class="problem">
+        <div class="container">
+            <h2 data-subtitle="Our Mission"><span>Why</span> <span>THRIVE</span> <span>Exists</span></h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <i class="fas fa-universal-access"></i>
+                    <h3>Accessibility Gap</h3>
+                    <p>Most wellness platforms aren't designed with accessibility in mind, creating barriers for users with different abilities.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-venus-mars"></i>
+                    <h3>Gender Inclusivity</h3>
+                    <p>Traditional health resources rarely address the unique wellness needs of women and gender minorities.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Our Mission</h3>
+                    <p>THRIVE bridges these gaps by creating a wellness platform that's both fully accessible and responsive to diverse gender health needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 data-subtitle="Innovative Solutions"><span>Features</span> <span>That</span> <span>Make</span> <span>A</span> <span>Difference</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Adaptive Interface</h3>
+                    <p>Fully customizable experience that adapts to various abilities and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Personalized Health</h3>
+                    <p>Tracking tools designed for diverse bodies and health experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Inclusive Community</h3>
+                    <p>Connect with others who share similar experiences and wellness goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Adaptive Exercise</h3>
+                    <p>Workout routines that can be performed regardless of mobility level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 data-subtitle="The Process"><span>How</span> <span>THRIVE</span> <span>Works</span></h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Personalized Onboarding</h3>
+                        <p>Begin with a customized onboarding that identifies both accessibility needs and health priorities.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Adaptive Experience</h3>
+                        <p>The platform adapts its interface, content, and recommendations to match your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Continuous Learning</h3>
+                        <p>As you engage with the platform, it refines the experience to better serve your unique wellness journey.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Community Connection</h3>
+                        <p>Connect with others who share similar experiences, creating support networks and shared growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase Section -->
+    <section id="app-showcase" class="app-showcase">
+        <div class="container">
+            <h2 data-subtitle="App Experience"><span>See</span> <span>THRIVE</span> <span>in</span> <span>Action</span></h2>
+            <div class="app-grid">
+                <div class="app-content">
+                    <h3>Designed for Everyone</h3>
+                    <p>THRIVE's revolutionary design prioritizes both accessibility and inclusivity, ensuring everyone has equal access to wellness resources.</p>
+                    
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>Accessibility First</h4>
+                            <p>Multiple interaction methods and adaptive interfaces for all abilities</p>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-venus-mars"></i>
+                            <h4>Gender Inclusive</h4>
+                            <p>Personalized health tracking that acknowledges diverse bodies and experiences</p>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-fingerprint"></i>
+                            <h4>Personalized Journey</h4>
+                            <p>Custom wellness recommendations that adapt to your unique needs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="app-store-buttons">
+                        <a href="#" class="app-store-button">
+                            <i class="fab fa-apple"></i>
+                            <span>
+                                <small>Download on the</small>
+                                App Store
+                            </span>
+                        </a>
+                        <a href="#" class="app-store-button">
+                            <i class="fab fa-google-play"></i>
+                            <span>
+                                <small>GET IT ON</small>
+                                Google Play
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="app-screens">
+                    <div class="phone phone-1">
+                        <div class="phone-inner"></div>
+                    </div>
+                    <div class="phone phone-2">
+                        <div class="phone-inner"></div>
+                    </div>
+                    <div class="phone phone-3">
+                        <div class="phone-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 data-subtitle="Together"><span>Join</span> <span>Our</span> <span>Community</span></h2>
+            <p class="section-intro">THRIVE is more than an app—it's a movement toward making health resources universally accessible and representative.</p>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"THRIVE has transformed how I approach wellness. For the first time, I've found a platform that truly understands my needs."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image"></div>
+                        <div class="author-name">Alex T.</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As someone with mobility limitations, finding accessible wellness resources has always been challenging. THRIVE changed that completely."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image"></div>
+                        <div class="author-name">Morgan K.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="community-counter">
+                <div class="counter-item">
+                    <div class="counter" data-count="5000">0</div>
+                    <div class="counter-label">Active Users</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-count="100">0</div>
+                    <div class="counter-label">Community Groups</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-count="15000">0</div>
+                    <div class="counter-label">Wellness Sessions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-subtitle="Take Action"><span>Be</span> <span>Part</span> <span>of</span> <span>THRIVE</span></h2>
+            <p class="section-intro">Sign up to join our beta testing group and help shape the future of inclusive wellness.</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="interests">I'm interested in (select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="accessibility"> Accessibility Features
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="gender-health"> Gender-Inclusive Health
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="community"> Community Support
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="beta"> Beta Testing
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Join THRIVE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-main">
+            <!-- Left side: Logo, Brand name and Tagline -->
+            <div class="footer-branding">
+                <div class="footer-logo">
+                    <img src="image/thrive-logo.png" alt="THRIVE Logo" class="footer-logo-image">
+                    <span class="footer-brand-name">THRIVE</span>
+                </div>
+                <p class="footer-tagline">Wellness Reimagined for Every Body</p>
+            </div>
+            
+            <!-- Right side: Navigation and Connect -->
+            <div class="footer-links-container">
+                <!-- Navigation links -->
+                <div class="footer-nav-section">
+                    <h4>NAVIGATION</h4>
+                    <nav class="footer-nav">
+                        <a href="#mission">Mission</a>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#community">Community</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+                
+                <!-- Social media links -->
+                <div class="footer-social-section">
+                    <h4>CONNECT WITH US</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom copyright and created with statement -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 THRIVE. All rights reserved.</p>
+            <p>Created with ❤️ for WiCHacks '25</p>
+        </div>
+    </div>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
