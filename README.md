@@ -27,7 +27,7 @@
 THRIVE is a revolutionary wellness platform that addresses two critical gaps in the current health tech landscape: accessibility and gender-inclusive health resources. Our solution seamlessly integrates these missions into one cohesive platform where wellness is truly reimagined for everybody.
 
 <div align="center">
-  <img src="image/app-screenshots/Frame 162(1).png" alt="THRIVE App Screenshots" width="80%">
+  <img src="image/3pic.png" alt="THRIVE App Screenshots" width="80%">
 </div>
 
 ## The Problem
