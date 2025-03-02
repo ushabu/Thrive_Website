@@ -198,24 +198,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const phones = document.querySelectorAll('.phone');
     phones.forEach((phone, index) => {
         phone.addEventListener('mouseenter', function() {
+            // Make this phone stand out
+            this.style.transform = 'scale(1.05)';
+            this.style.zIndex = '10';
+            
             // Make other phones slightly transparent
             phones.forEach((otherPhone, otherIndex) => {
                 if (otherIndex !== index) {
                     otherPhone.style.opacity = '0.7';
-                    otherPhone.style.transform = otherPhone.className.includes('phone-1') ? 'rotate(-8deg) translateY(30px)' : 
-                                                otherPhone.className.includes('phone-3') ? 'rotate(8deg) translateY(30px)' : 
-                                                'scale(1)';
+                    otherPhone.style.transform = otherPhone.classList.contains('phone-1') ? 
+                        'translateX(-50%) rotate(-8deg)' : 
+                        otherPhone.classList.contains('phone-3') ? 
+                        'translateX(50%) rotate(8deg)' : 
+                        'scale(0.95)';
                 }
             });
         });
         
         phone.addEventListener('mouseleave', function() {
             // Reset all phones
+            this.style.zIndex = '';
             phones.forEach((otherPhone) => {
                 otherPhone.style.opacity = '1';
-                otherPhone.style.transform = otherPhone.className.includes('phone-1') ? 'rotate(-5deg) translateY(20px)' : 
-                                            otherPhone.className.includes('phone-3') ? 'rotate(5deg) translateY(20px)' : 
-                                            'scale(1.1)';
+                otherPhone.style.transform = otherPhone.classList.contains('phone-1') ? 
+                    'translateX(-50%) rotate(-5deg)' : 
+                    otherPhone.classList.contains('phone-3') ? 
+                    'translateX(50%) rotate(5deg)' : 
+                    'none';
             });
         });
     });
@@ -252,8 +261,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Add parallax scrolling effect
-    const parallaxElements = document.querySelectorAll('.hero-content, .floating-element');
-    
     const parallaxScroll = function() {
         const scrollY = window.scrollY;
         
@@ -275,6 +282,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const counters = document.querySelectorAll('.counter');
         
         counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000; // 2 seconds
+            const step = Math.ceil(target / (duration / 20)); // Update every
             const target = parseInt(counter.getAttribute('data-count'));
             const duration = 2000; // 2 seconds
             const step = Math.ceil(target / (duration / 20)); // Update every 20ms
